@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+header h1 {
+    background: rgb(59,110,196);
+    background: linear-gradient(90deg, rgba(59,110,196,1) 35%, rgba(35,6,86,1) 100%);
+}
+.myColor {
+    background-color: #33475A;
+}

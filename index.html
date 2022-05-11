@@ -3,10 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+
+    <header class="mb-2">
+        <h1 class="text-white pt-2 pb-3 text-center font-weight-bold">Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row"> 
+
+            <!-- Form City Search Section -->
+            <section class="col-3 ml-2">
+                <div class="form-group border-bottom border-dark">
+                    <label for="cityInput">
+                        <h2 class="font-weight-bold">Search for a City:</h2>
+                    </label>
+                    <input id="cityInput" class="form-control mb-3" type="text" placeholder="San Diego">
+                    <button type="button" class="btn btn-primary btn-block mb-3">Search</button>
+                </div>
+                <!-- City Buttons Section -->
+                <div>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Austin</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Chicago</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">New York</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Orlando</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">San Francisco</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Seattle</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Denver</button>
+                    <button type="button" class="btn btn-secondary btn-block mb-3">Atlanta</button>
+                </div>
+            </section>
+
+            <!-- Right Half of dashboard -->
+            <section class="col">
+
+                <!-- Current Weather Details Section -->
+                <div class="border border-dark p-2 mt-2 mb-3">
+                    <h2>Atlanta (3/30/2021)</h2>
+                    <p>Temp: 74.01F</p>
+                    <p>Wind: 6.67 MPH</p>
+                    <p>Humidity: 46%</p>
+                    <p>UV index: <button type="button" class="btn btn-success">0.47</button></p>
+                </div>
+
+                <!-- 5 Day Forecast Section-->
+                <div>
+                    <h4 class="font-weight-bold">5-Day Forecast:</h4>
+
+                    <div class="row text-white justify-content-around">
+                        <div class="col-2 myColor">
+                            <h5>3/31/2021</h5>
+                            <div>
+                                <img />
+                            </div>
+                            <p>Temp: 73.72 F</p>
+                            <p>Wind: 9.53 MPH</p>
+                            <p>Humidity: 66 %</p>
+                        </div>
+                        <div class="col-2 myColor">
+                            <h5>3/31/2021</h5>
+                            <div>
+                                <img />
+                            </div>
+                            <p>Temp: 73.72 F</p>
+                            <p>Wind: 9.53 MPH</p>
+                            <p>Humidity: 66 %</p>
+                        </div>
+                        <div class="col-2 myColor">
+                            <h5>3/31/2021</h5>
+                            <div>
+                                <img />
+                            </div>
+                            <p>Temp: 73.72 F</p>
+                            <p>Wind: 9.53 MPH</p>
+                            <p>Humidity: 66 %</p>
+                        </div>
+                        <div class="col-2 myColor">
+                            <h5>3/31/2021</h5>
+                            <div>
+                                <img />
+                            </div>
+                            <p>Temp: 73.72 F</p>
+                            <p>Wind: 9.53 MPH</p>
+                            <p>Humidity: 66 %</p>
+                        </div>
+                        <div class="col-2 myColor">
+                            <h5>3/31/2021</h5>
+                            <div>
+                                <img />
+                            </div>
+                            <p>Temp: 73.72 F</p>
+                            <p>Wind: 9.53 MPH</p>
+                            <p>Humidity: 66 %</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Script Section -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
