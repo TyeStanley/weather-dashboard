@@ -7,4 +7,6 @@ header h1 {
 }
 .myColor {
     background-color: #33475A;
+    width: 200px;
+    padding: 10px;
 }

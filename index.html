@@ -21,39 +21,30 @@
             <!-- Form City Search Section -->
             <section class="col-3 ml-2">
                 <form id="cityForm" class="form-group border-bottom border-dark">
-                    <label for="cityName" class="form-label">
-                        <h2 class="font-weight-bold">Search for a City:</h2>
-                    </label>
-
-                    <input id="cityName" for="cityName" class="form-control mb-3" type="text" placeholder="San Diego">
+                    <label for="cityInput" class="form-label font-weight-bold">Search for a City:</label>
+                    <input id="cityInput" for="cityInput" class="form-control mb-3" type="text" placeholder="San Diego" />
                     <button id="cityBtn" type="submit" class="btn btn-primary btn-block mb-3">Search</button>
                 </form>
-
                 <!-- City Buttons Section -->
-                <div id="cityHistory"></div>
+                <div id="searchHistory">
+                    <!-- Searched City Buttons appends here -->
+                </div>
                 <!-- <button type="button" class="btn btn-secondary btn-block mb-3">Austin</button> -->
             </section>
 
-
             <!-- Right Half of dashboard -->
             <section class="col">
-
                 <!-- Current Weather Details Section -->
-                <div id="weatherContainer" class="border border-dark p-2 mt-2 mb-3"></div>
-
+                <div id="weatherContainer" class="p-2 mt-2 mb-3">
+                    <!-- Current Weather Conditions appends here -->
+                </div>
                 <!-- 5 Day Forecast Section-->
-                <div id="forecastContainer">
-                    <h4 class="font-weight-bold">5-Day Forecast:</h4>
-
-                    <div class="row text-white justify-content-around">
-                        <div id="day1" class="col-2 myColor"></div>
-                        <div id="day2" class="col-2 myColor"></div>
-                        <div id="day3" class="col-2 myColor"></div>
-                        <div id="day4" class="col-2 myColor"></div>
-                        <div id="day5" class="col-2 myColor"></div>
+                <div id="forecastContainer" class="p-2 mt-2 mb-3">
+                    <h4 id="forecastHeader" class="font-weight-bold"></h4>
+                    <div id="dailyContainer" class="row text-white justify-content-around">
+                        <!-- 5 Day Forecast appends here -->
                     </div>
                 </div>
-
             </section>
 
         </div>
