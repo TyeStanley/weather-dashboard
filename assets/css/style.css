@@ -1,12 +1,57 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  height: 100vh;
+  background-color: rgb(59,110,196);
+}
+
+header {
+  border-bottom: 2px solid white;
+}
+
 header h1 {
-    background: rgb(59,110,196);
-    background: linear-gradient(90deg, rgba(59,110,196,1) 35%, rgba(35,6,86,1) 100%);
+  background: rgb(59,110,196);
+  background: linear-gradient(90deg, rgba(59,110,196,1) 35%, rgba(35,6,86,1) 100%);
+  margin: 0;
+  padding: 0;
 }
+
 .myColor {
-    background-color: #33475A;
-    width: 200px;
-    padding: 10px;
+  background-color: #33475A;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: .5rem;
+}
+/* Refactor */
+.form-city-search {
+  background-color: rgba(165, 165, 165, 0.7);
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  height: 100%;
+}
+.weather-body__container {
+  padding: 1rem;
+  background-color: rgb(59,110,196);
+}
+
+.current-day {
+  border-radius: 1rem;
+  border: 2px solid white;
+}
+
+#weatherContainer {
+  border: 2px solid white;
+}
+
+#currentUvi {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 1rem;
 }
