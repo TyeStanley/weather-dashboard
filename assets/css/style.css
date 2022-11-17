@@ -23,19 +23,32 @@ header h1 {
 
 .myColor {
   background-color: #33475A;
-  width: 200px;
+  width: 150px;
   padding: 10px;
   border: 1px solid white;
   border-radius: 1rem;
-  margin: .5rem;
+  margin: .1rem;
 }
-/* Refactor */
+
+.myColor p {
+  margin: .3rem 0;
+}
+
+.myColor .div-icon {
+  width: 50px;
+}
+
+.myColor .div-icon img {
+  width: 100%;
+}
+
 .form-city-search {
   background-color: rgba(165, 165, 165, 0.7);
   border-radius: 1rem;
   padding: .5rem 1rem;
   height: 100%;
 }
+
 .weather-body__container {
   padding: 1rem;
   background-color: rgb(59,110,196);

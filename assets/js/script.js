@@ -5,12 +5,28 @@ function formSubmitHandler(event) {
   event.preventDefault();
   let city = cityInput.value.trim();
   if (city) {
-    getCityData(city);
-    citySearchHistory(city);
+    let capitalizedCity = capitalizeFirstLetter(city);
+    getCityData(capitalizedCity);
+    citySearchHistory(capitalizedCity);
     // clear old content
-    city.value = '';
+    cityInput.value = '';
   } else { alert('Please enter city name') }
 };
+
+function capitalizeFirstLetter(city) {
+  city = city.toLowerCase();
+  let currentCity = city.split(' ');
+  let capitalizedCity = '';
+
+  currentCity.forEach(word => {
+    let firstLetterLowercase = word.charAt(0);
+    let firstLetterUppercase = word.charAt(0).toUpperCase();
+    let capitalizedWord = word.replace(firstLetterLowercase, firstLetterUppercase);
+    capitalizedCity += capitalizedWord + ' ';
+  });
+
+  return capitalizedCity.trim();
+}
 
 // Gets the city data from the api service
 function getCityData(city) {
@@ -35,7 +51,7 @@ function getCityData(city) {
 
 // Sets the current weather
 function currentWeather(city, data) {
-  let updateCity = city.charAt(0).toUpperCase() + city.slice(1);
+  let updateCity = city.charAt(0).toUpperCase() + city.slice(1); // will remove this
   // Grabs current weather data and updates
   let currentTime = moment.unix(data.current.dt).format("MM/DD/YYYY");
   let currentTemp =  ((data.current.temp - 273.15) * 1.8) + 32;
@@ -93,7 +109,7 @@ function futureWeather(data) {
     eachDay.innerHTML = `
       <div class="myColor">
         <p>${currentDate}</p>
-        <p>${iconURL}</p>
+        <div class="div-icon">${iconURL}</div>
         <p>Temp: ${tempToF.toFixed(2)} °F</p>
         <p>Wind: ${dailyCityInfo.wind} MPH</p>
         <p>Humidity: ${dailyCityInfo.humidity} %</p>
@@ -113,6 +129,7 @@ function citySearchHistory(city) {
     localStorage.setItem('city', JSON.stringify(searchHistoryArr));
   }
 };
+
 // Runs 'getCityData' function when a button in searchHistory is clicked. Uses the text content of the button for the city value
 $(document).on('click', ".btn-secondary", function() {
   let cityBtn = $(this).text();
